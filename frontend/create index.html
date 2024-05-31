@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leveling Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="path_to_core_logo.png" alt="Core Logo">
+    <div>
+      <h1>Leveling Sheet</h1>
+      <h2></h2>
+    </div>
+  </div>
+
+  <div class="project-details">
+    <form id="projectDetailsForm" onsubmit="saveProjectDetails(event)">
+      <label for="projectName">Project Name:</label>
+      <input type="text" id="projectName" name="projectName" required>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+      <button type="submit">Save Details</button>
+    </form>
+  </div>
+
+  <div class="table-container">
+    <table class="leveling-table">
+      <thead>
+        <tr>
+          <th>Station</th>
+          <th>B.S.</th>
+          <th>I.S.</th>
+          <th>F.S</th>
+          <th>Rise</th>
+          <th>Fall</th>
+          <th>Reduced Level</th>
+          <th>Distance</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text" readonly></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="9">
+            <button type="button" onclick="addRow()">Add Row</button>
+            <button type="button" onclick="calculate()">Calculate</button>
+            <button type="button" onclick="saveToCSV()">Save to CSV</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
